@@ -1,8 +1,9 @@
 theme: minima
 header_pages:
   - about/contact-us.md
-  
 minima:
+  skin: dark 
+
   social_links:
     twitter: jekyllrb
     github: jekyll
@@ -32,3 +33,5 @@ minima:
     youtube: jekyll
     youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
     youtube_channel_name: CloudCannon
+    
+    google_analytics: UA-NNNNNNNN-N
