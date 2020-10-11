@@ -1,1 +1,3 @@
 theme: architect
+header_pages:
+  - about/contact-us.md
