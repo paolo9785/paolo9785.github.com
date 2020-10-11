@@ -1,3 +1,4 @@
+theme: architect
 <!DOCTYPE html>
 <html>
 <body>
