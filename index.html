@@ -1,294 +1,249 @@
----
-layout: default
----
-<link href="css/portfolio.css" rel="stylesheet" type="text/css">
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Album example · Bootstrap</title>
 
-<div class="home portfolio boxing">
-    
-  <div id="myBtnContainer">
-    <button class="btn active" onclick="filterSelection('all')"> All</button>
-    <button class="btn" onclick="filterSelection('data-analysis')"> SatCom</button>
-    <button class="btn" onclick="filterSelection('ml-tools')"> IOT</button>
-    <button class="btn" onclick="filterSelection('supervised-learning')"> DevOps</button>
-    <button class="btn" onclick="filterSelection('reinforcement-learning')"> Business Management</button>
-    <button class="btn" onclick="filterSelection('unsup-learning')"> Forensics</button>
-  </div>
- 
-  <div class="row">
-          <div class="column data-analysis">
-            <div class="content" style="height:300px;">
-              <a href="data-analysis/2018/03/03/fit_wrapper.html">
-                <img src="asset/images/home/fit_wrap.svg" alt="data-analysis" style="width:100%">
-                <h1>Fitwrap</h1>
-              </a>
-              <p>Usage of fitwrappar package. Fit in one line of code.</p>
-            </div>
-          </div>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
-          <div class="column supervised-learning">
-            <div class="content" style="height:300px;">
-              <a href="supervised-learning/2019/06/30/xray.html">
-                <img src="asset/images/home/xray.png" alt="xray U-net" style="width:100%">
-                <h1>X-ray PNX</h1>
-              </a>
-              <p>Diagnosis and localization of PNX problem from X-ray images using U-net.</p>
-            </div>
-          </div>
-
-          <div class="column reinforcement-learning">
-            <div class="content" style="height:300px;">
-              <a href="reinforcement-learning/2019/10/03/karmed.html">
-                <img src="asset/images/home/karmed-bandit.svg" alt="k-armed bandit" style="width:100%">
-                <h1>k-armed bandit</h1>
-              </a>
-              <p>Exploiting reinforcement learning strategies to tackle the k-armed bandit problem.</p>
-            </div>
-          </div>
-
-          <div class="column data-analysis">
-            <div class="content" style="height:300px;">
-              <a href="data-analysis/2019/07/21/matplotlib.html">
-                <img src="asset/images/home/matplotlib.svg" alt="data-analysis" style="width:100%">
-                <h1>Matplotlib</h1>
-              </a>
-              <p>Collection of matplotlib examples. Collection of common arguments for plotting functions.</p>
-            </div>
-          </div>
-
-          <div class="column data-analysis">
-            <div class="content" style="height:300px;">
-              <a href="data-analysis/2019/05/09/pandas_cheatsheet.html">
-                <img src="asset/images/home/pandas.svg" alt="panda" style="width:100%">
-                <h1>Pandas cheat-sheet</h1>
-              </a>
-              <p>Collection of common ideas to work with Pandas dataframes.</p>
-            </div>
-          </div>
-
-          <div class="column unsup-learning">
-            <div class="content" style="height:300px;">
-              <a href="unsup-learning/2020/02/22/vae_mnist.html">
-                <img src="asset/images/home/vae.png" alt="vae" style="width:100%">
-                <h1>VAE</h1>
-              </a>
-              <p>Example of Variational Auto Encoder using MNIST dataset. </p>
-            </div>
-          </div>
-
-          <div class="column reinforcement-learning">
-            <div class="content" style="height:300px;">
-              <a href="reinforcement-learning/2019/10/14/monte-carlo-rl.html">
-                <img src="asset/images/home/mc_downhill_cut.png" alt="monte carlo downhill" style="width:100%">
-                <h1>Monte Carlo for RL</h1>
-              </a>
-              <p>Simple code for three Monte Carlo methods for RL (exploring starts, epsilon-greedy, off-policy). </p>
-            </div>
-          </div>
-
-          <div class="column ml-tools">
-            <div class="content" style="height:300px;">
-              <a href="ml-tools/2019/07/25/data_scaling.html">
-                <img src="asset/images/home/preprocessing.png" alt="data scaling" style="width:100%">
-                <h1>Data scaling</h1>
-              </a>
-              <p>Collection od normalizations and standardizations techniques.</p>
-            </div>
-          </div>
-
-          <div class="column data-analysis">
-            <div class="content" style="height:300px;">
-              <a href="data-analysis/2019/06/12/geopandas.html">
-                <img src="asset/images/home/geopandas.png" alt="geopandas" style="width:100%">
-                <h1>Geopandas</h1>
-              </a>
-              <p>Use geographic data to plot informations from a panda dataframe.</p>
-            </div>
-          </div>
-
-          <div class="column data-analysis">
-            <div class="content" style="height:300px;">
-              <a href="data-analysis/2020/03/02/hist_sampling.html">
-                <img src="asset/images/home/hist_home_ico.svg" alt="hist-sampling" style="width:100%">
-                <h1>Histogram sampling</h1>
-              </a>
-              <p>Sample from unknown 1D or 2D distributions using histograms.</p>
-            </div>
-          </div>
-
-          <div class="column unsup-learning">
-            <div class="content" style="height:300px;">
-              <a href="unsup-learning/2019/06/24/autoencoder.html">
-                <img src="asset/images/home/autoencoders.png" alt="autoencoder" style="width:100%">
-                <h1>Autoencoders</h1>
-              </a>
-              <p>Simple denoising autoencoder neural network.</p>
-            </div>
-          </div>
+    <!-- Bootstrap core CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
 
 
-          <div class="column unsup-learning">
-            <div class="content" style="height:300px;">
-              <a href="unsup-learning/2019/07/30/feature-selection.html">
-                <img src="asset/images/home/dimensionality_reduction_paint.png" alt="feature selection" style="width:100%">
-                <h1>Feature selection</h1>
-              </a>
-              <p>Collection of dimensionality reduction algorithm from sklearn.</p>
-            </div>
-          </div>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
 
-          <div class="column reinforcement-learning">
-            <div class="content" style="height:300px;">
-              <a href="reinforcement-learning/2019/10/06/iterative-policy-eval">
-                <img src="asset/images/home/iterative_policy.svg" alt="iterative_policy" style="width:100%">
-                <h1>Iterative policy</h1>
-              </a>
-              <p>Solving a simple maze problem exploiting iterative policy evaluation method. </p>
-            </div>
-          </div>
-
-          <div class="column supervised-learning">
-            <div class="content" style="height:300px;">
-              <a href="supervised-learning/2019/06/15/deep_mouse.html">
-                <img src="asset/images/home/deep_mouse.png" alt="deep mouse" style="width:100%">
-                <h1>DeepMouse</h1>
-              </a>
-              <p>Thought processes behind the development of a neural network.</p>
-            </div>
-          </div>
-
-            <div class="column data-analysis">
-              <div class="content" style="height:300px;">
-                <a href="data-analysis/2019/05/27/numpy.html">
-                  <img src="asset/images/home/numpy.png" alt="numpy" style="width:100%">
-                  <h1>Numpy</h1>
-                </a>
-                <p>Collection of notes about the numpy library.</p>
-              </div>
-            </div>
-
-
-            <div class="column reinforcement-learning">
-              <div class="content" style="height:300px;">
-                <a href="reinforcement-learning/2019/05/08/bayesian_opt.html">
-                  <img src="asset/images/home/bayes_opt.png" alt="bayesian optimization" style="width:100%">
-                  <h1>Bayesian Opt</h1>
-                </a>
-                <p>Example of Bayesian optimization for hyper-parameters tuning.</p>
-              </div>
-            </div>
-
-            <div class="column reinforcement-learning">
-              <div class="content" style="height:300px;">
-                <a href="reinforcement-learning/2018/11/22/neural_network_from_0.html">
-                  <img src="asset/images/home/neural_network.png" alt="other" style="width:100%">
-                  <h1>NN from scratch</h1>
-                </a>
-                <p>Simple implementation of neural network with genetic evolution from scratch (numpy only). </p>
-              </div>
-            </div>
-
-            <div class="column data-analysis">
-              <div class="content" style="height:300px;">
-                <a href="data-analysis/2018/03/26/griddata.html">
-                  <img src="asset/images/home/griddata.png" alt="griddata" style="width:100%">
-                  <h1>Griddata</h1>
-                </a>
-                <p>Interpolate 2D data-points to a given coordinate grid.</p>
-              </div>
-            </div>
-
-            <div class="column other">
-              <div class="content" style="height:300px;">
-                <a href="fast-copy-paste/2016/09/02/jupyter-imports.html">
-                  <img src="asset/images/home/jupyter-logo.svg" alt="jupyter imports" style="width:100%">
-                  <h1>Jupyter imports</h1>
-                </a>
-                <p>List of standard data analysis imports and magics.</p>
-              </div>
-            </div>
-
-            <div class="column data-analysis">
-              <div class="content" style="height:300px;">
-                <a href="data-analysis/2019/05/09/jupyter_plot_update.html">
-                  <img src="asset/images/home/random_walk.png" alt="data-analysis" style="width:100%">
-                  <h1>Plot live update</h1>
-                </a>
-                <p>Jupyter live plot update and random walk demonstration.</p>
-              </div>
-            </div>
-
-            <div class="column other">
-              <div class="content" style="height:300px;">
-                <a href="python/2016/09/06/console-progressbar.html">
-                  <img src="asset/images/home/progress_bar.svg" alt="progress-bar" style="width:100%">
-                  <h1>Text progressbar</h1>
-                </a>
-                <p>Simple implementation of a text progressbar.</p>
-              </div>
-            </div>
-
-            <div class="column other">
-              <div class="content" style="height:300px;">
-                <a href="fast-copy-paste/2017/07/11/sublime_keymap.html">
-                  <img src="asset/images/home/st3.svg" alt="sublime keymap" style="width:100%">
-                  <h1>ST3 key bindings</h1>
-                </a>
-                <p>Custom key bindings for Sublime Text editor.</p>
-              </div>
-            </div>
-
-            <div class="column reinforcement-learning">
-              <div class="content" style="height:300px;">
-                <a href="reinforcement-learning/2019/11/11/sarsa-q.html">
-                  <img src="asset/images/home/q-learning.svg" alt="q-laerning" style="width:100%">
-                  <h1>SARSA and Q-learn</h1>
-                </a>
-                <p>Usage examples of Q-learning and SARSA algorithms.</p>
-              </div>
-            </div>
-
-            <div class="column data-analysis">
-              <div class="content" style="height:300px;">
-                <a href="data-analysis/2019/12/10/pandas_merge.html">
-                  <img src="asset/images/home/merge.svg" alt="pandas_merge" style="width:100%">
-                  <h1>Pandas merge</h1>
-                </a>
-                <p>Merging pandas dataframe for dummies.</p>
-              </div>
-            </div>
-
-            <div class="column other">
-              <div class="content" style="height:300px;">
-                <a href="fast-copy-paste/2017/11/20/list_sorting.html">
-                  <img src="asset/images/home/sort_list.svg" alt="list sorting" style="width:100%">
-                  <h1>Sort lists</h1>
-                </a>
-                <p>Sort more than one list together.</p>
-              </div>
-            </div>
-
-            <div class="column other">
-              <div class="content" style="height:300px;">
-                <a href="other/2020/07/28/unix.html">
-                  <img src="asset/images/home/tux.svg" alt="tux" style="width:100%">
-                  <h1>Unix commands</h1>
-                </a>
-                <p>A list of usefull unix commands</p>
-              </div>
-            </div>
-
-            <div class="column other">
-              <div class="content" style="height:300px;">
-                <a href="other/2020/07/27/tf-setup.html">
-                  <img src="asset/images/home/tf.svg" alt="tf" style="width:100%">
-                  <h1>TFlite setup</h1>
-                </a>
-                <p>Setup of tensorflow, tensorflow lite and coral usb accelerator on Ubuntu.</p>
-              </div>
-            </div>
-
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+  <div class="collapse bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-white">About</h4>
+          <p class="text-muted">Add some information about the album below, the author, or any other background context. Make it a few sentences long so folks can pick up some informative tidbits. Then, link them off to some social networking sites or contact information.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4 class="text-white">Contact</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Follow on Twitter</a></li>
+            <li><a href="#" class="text-white">Like on Facebook</a></li>
+            <li><a href="#" class="text-white">Email me</a></li>
+          </ul>
+        </div>
       </div>
-  
-  <script src="/js/portfolio.js"></script>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container d-flex justify-content-between">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path><circle cx="12" cy="13" r="4"></circle></svg>
+        <strong>Album</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
 
-</div>
+<main role="main">
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1>Album example</h1>
+      <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+      <p>
+        <a href="#" class="btn btn-primary my-2">Main call to action</a>
+        <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+      </p>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                </div>
+                <small class="text-muted">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="#">Back to top</a>
+    </p>
+    <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+    <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.5/getting-started/introduction/">getting started guide</a>.</p>
+  </div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+</body></html>
